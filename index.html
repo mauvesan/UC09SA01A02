@@ -1,8 +1,7 @@
-index.html
 <html>
   <head>
     <meta charset="UTF-8">
-    <script src="./js/javascriptuc09sa01a02.js"> </script>
+    <script src="./js/javascriptuc09sa01a02.js"></script>
   </head>
   <body>
     Nome:
@@ -17,7 +16,7 @@ index.html
       <input id="year" type="text" maxlength="4">
       <br>
     CPF:
-      <input id="cpf" type="text" maxlength="14">
+      <input id="cpf" type="text" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
       <br>
     Time do coração:
       <select id="team_id" maxlength="20">
@@ -34,12 +33,9 @@ index.html
      <input type="checkbox" name="sport" id="5">Automobilismo<br>
      <input type="checkbox" name="sport" id="6">Artes Marciais<br>
      <input type="checkbox" name="sport" id="7">Natação<br>
+     <input type="submit" value="Validar Formulário" onclick="validaFormulario();">
+     <input type="submit" value="Gerar JSON" onclick="geraJson();">
      <br>
-     <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button" onclick="ValidaFormulario()">Validar Formulário</button> <br> <br>
-        <p id="ResultadoFinal"></p>
-        <button class="btn btn-primary" type="button" onclick="GerarJson()">Gerar JSON</button>
-      </div>
+     <p id="pResultado"></p>
   </body>
 </html>
-
